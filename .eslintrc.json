@@ -1,3 +1,72 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "next",
+    "plugin:prettier/recommended",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": ["graphql-operations.ts", "resolvers-types.ts"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "semi": ["error", "never"],
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreUrls": true,
+        "ignoreTrailingComments": true
+      }
+    ],
+    "eol-last": ["error", "always"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "object",
+          "index",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{.,..}/*.scss",
+            "group": "unknown",
+            "position": "after",
+            "patternOptions": { "matchBase": true }
+          }
+        ]
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "object-curly-spacing": ["error", "always"],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true
+      }
+    ],
+    "camelcase": "warn",
+    "no-console": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 80,
+        "semi": false,
+        "endOfLine": "auto",
+        "parser": "typescript"
+      }
+    ]
+  }
 }
