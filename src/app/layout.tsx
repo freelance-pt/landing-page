@@ -27,10 +27,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="vi">
-      <body className={`${sarabun.variable} ${lobster.variable}`}>
-        {children}
-      </body>
+    <html lang='vi'>
+      <body className={`${sarabun.variable} ${lobster.variable}`}>{children}</body>
     </html>
   )
 }

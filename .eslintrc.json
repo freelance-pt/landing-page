@@ -1,6 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+  ],
   "extends": [
     "next",
     "plugin:prettier/recommended",
@@ -8,15 +10,21 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "ignorePatterns": ["graphql-operations.ts", "resolvers-types.ts"],
+  "ignorePatterns": [
+    "graphql-operations.ts",
+    "resolvers-types.ts"
+  ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-    "semi": ["error", "never"],
+    "semi": [
+      "error",
+      "never"
+    ],
     "max-len": [
       "error",
       {
-        "code": 80,
+        "code": 120,
         "tabWidth": 2,
         "ignoreComments": true,
         "ignoreStrings": true,
@@ -24,7 +32,10 @@
         "ignoreTrailingComments": true
       }
     ],
-    "eol-last": ["error", "always"],
+    "eol-last": [
+      "error",
+      "always"
+    ],
     "import/order": [
       "error",
       {
@@ -43,13 +54,18 @@
             "pattern": "{.,..}/*.scss",
             "group": "unknown",
             "position": "after",
-            "patternOptions": { "matchBase": true }
+            "patternOptions": {
+              "matchBase": true
+            }
           }
         ]
       }
     ],
     "no-trailing-spaces": "error",
-    "object-curly-spacing": ["error", "always"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "keyword-spacing": [
       "error",
       {
@@ -59,13 +75,16 @@
     "camelcase": "warn",
     "no-console": "warn",
     "prettier/prettier": [
-      "error",
+      "warn",
       {
-        "singleQuote": true,
-        "printWidth": 80,
+        "arrowParens": "always",
         "semi": false,
+        "tabWidth": 2,
         "endOfLine": "auto",
-        "parser": "typescript"
+        "useTabs": false,
+        "singleQuote": true,
+        "printWidth": 120,
+        "jsxSingleQuote": true
       }
     ]
   }
