@@ -1,3 +1,10 @@
+import { Carousels } from '@/components'
+
 export default function Home() {
-  return <main>Hello World!</main>
+  return (
+    <>
+      <Carousels />
+      <section>Hello World!</section>
+    </>
+  )
 }
