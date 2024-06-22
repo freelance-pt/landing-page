@@ -5,7 +5,7 @@ import { Navigation } from './navigation'
 
 export const Header = () => {
   return (
-    <header className='font-sans bg-primary'>
+    <header className='bg-primary'>
       <div className=' text-gray-300 hidden text-sm lg:flex items-center justify-between max-w-screen-xl w-full mx-auto py-2 px-4 2xl:px-0'>
         <div>
           hotline: <span className='text-base text-white'>0985.136.914</span>

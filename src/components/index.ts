@@ -1,3 +1,5 @@
 export * from './header'
 export * from './footer'
 export * from './carousels'
+export * from './product-card'
+export * from './tabs'
