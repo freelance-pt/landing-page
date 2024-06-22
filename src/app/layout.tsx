@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='vi'>
-      <body className={`${sarabun.variable} ${lobster.variable}`}>{children}</body>
+      <body className={`${sarabun.variable} ${lobster.variable} font-sans`}>{children}</body>
     </html>
   )
 }

@@ -21,7 +21,7 @@ export const ProductSection = () => {
     <section>
       <div className='max-w-screen-xl mx-auto py-8 px-4 2xl:px-0'>
         <div className='w-full text-center mb-8'>
-          <h2 className='font-curs text-primary mb-2 text-2xl lg:text-4xl'>Sản Phẩm Trà Sâm Dứa</h2>
+          <h2 className='font-curs text-primary my-3 text-2xl lg:text-4xl'>Sản Phẩm Trà Sâm Dứa</h2>
           <Divider />
         </div>
 

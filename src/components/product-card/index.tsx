@@ -13,15 +13,15 @@ type ProductCardProps = {
 export const ProductCard = ({ data, onClick }: ProductCardProps) => {
   return (
     <div className='w-full h-full px-2 mb-6 group cursor-pointer'>
-      <div className='p-2 w-full max-w-sm bg-white border border-gray-200 rounded-lg group-hover:shadow-lg'>
+      <div className='p-2 w-full max-w-sm bg-white border border-gray-200 rounded-lg group-hover:shadow-xl'>
         <div className='w-full h-full overflow-hidden'>
           <Image
-            className='transition-transform duration-300 ease-in-out hover:scale-110 origin-center'
+            className='transition-transform duration-300 ease-in-out grouphover:scale-110 origin-center'
             src={sp1}
             alt='product image'
           />
         </div>
-        <div className='py-3'>
+        <div className='py-3 px-0 lg:px-3'>
           <h5 className='text-sm lg:text-base font-normal lg:font-medium text-neutral-900 group-hover:text-primary mb-2 uppercase'>
             TRÀ HƯƠNG LÀI NGỌC QUANG
           </h5>

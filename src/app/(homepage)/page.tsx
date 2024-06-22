@@ -3,9 +3,10 @@ import shipSvg from 'public/icons/ship.svg'
 import moneySvg from 'public/icons/money.svg'
 import arrowDownSvg from 'public/icons/arrow-down-circle.svg'
 import teaPlantation from 'public/tea-plantation.jpeg'
-import { Carousels, ProductCard, Tabs } from '@/components'
+import { Carousels } from '@/components'
 import { Divider } from '@/components/ui'
 import { ProductSection } from './components/product-section'
+import { BlogSection } from './components/blog-section'
 
 export default function Home() {
   return (
@@ -51,7 +52,7 @@ export default function Home() {
       <section className='bg-green-50'>
         <div className='max-w-screen-xl mx-auto py-8 px-4 2xl:px-0'>
           <div className='w-full text-center mb-10'>
-            <h2 className='font-curs text-primary mb-2 text-2xl lg:text-4xl'>Trà Sâm Dứa Ngọc Quang</h2>
+            <h2 className='font-curs text-primary my-3 text-2xl lg:text-4xl'>Trà Sâm Dứa Ngọc Quang</h2>
             <p className='text-neutral-900 w-full md:w-[80%] lg:w-[54%] mx-auto text-sm lg:text-base mb-4'>
               được dùng nguồn trà rộng khắp tại Bảo Lộc, nguyên liệu được thu mua trực tiếp tại các nhà máy chế biến trà
               tươi, không lẫn tạp chất.
@@ -93,12 +94,18 @@ export default function Home() {
       <ProductSection />
 
       <section>
-        <Image src={teaPlantation} alt='Banner' className='max-w-screen-xl mx-auto h-36 lg:h-56 object-cover' />
+        <Image
+          src={teaPlantation}
+          alt='Banner'
+          className='max-w-screen-xl mx-auto h-36 lg:h-56 object-cover rounded-none lg:rounded-lg'
+        />
       </section>
+
+      <BlogSection />
 
       <section className='py-8 px-4 2xl:px-0'>
         <div className='max-w-screen-xl w-full mx-auto '>
-          <h5 className='font-medium text-lg text-primary mb-8'>NHẬN THÔNG TIN KHUYẾN MÃI & SẢN PHẨM MỚI.</h5>
+          <h4 className='font-medium text-lg text-primary mb-8'>NHẬN THÔNG TIN KHUYẾN MÃI & SẢN PHẨM MỚI.</h4>
         </div>
         <div className='max-w-screen-xl w-full mx-auto flex flex-col lg:flex-row gap-6'>
           <div className='w-full lg:w-6/12'>
