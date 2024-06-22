@@ -97,7 +97,7 @@ export default function Home() {
         <Image
           src={teaPlantation}
           alt='Banner'
-          className='max-w-screen-xl mx-auto h-36 lg:h-56 object-cover rounded-none lg:rounded-lg'
+          className='max-w-screen-xl w-full mx-auto h-36 lg:h-56 object-cover rounded-none lg:rounded-lg'
         />
       </section>
 
