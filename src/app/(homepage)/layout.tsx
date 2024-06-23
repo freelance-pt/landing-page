@@ -9,7 +9,7 @@ export default function HomePageLayout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <main className='font-sans'>{children}</main>
+      <main className='font-sans mt-[80px] lg:mt-[128px]'>{children}</main>
       <Footer />
     </>
   )

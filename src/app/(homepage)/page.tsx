@@ -7,7 +7,6 @@ import { ProductSection } from './components/product-section'
 import { BlogSection } from './components/blog-section'
 import { Carousels } from './components/carousels'
 import { TitleSection } from './components/title-section'
-import { ReceiveEmailSection } from './components/receive-email-section'
 
 export default function Home() {
   return (
@@ -101,8 +100,6 @@ export default function Home() {
       </section>
 
       <BlogSection />
-
-      <ReceiveEmailSection />
     </>
   )
 }

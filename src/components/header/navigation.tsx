@@ -21,7 +21,7 @@ const routes: { path: string; label: string; icon?: string }[] = [
     label: 'Sản phẩm',
   },
   {
-    path: '/blog',
+    path: '/blogs',
     label: 'Blog & Tin tức',
   },
 ]

@@ -1,11 +1,9 @@
-import Link from 'next/link'
-import shopeeSvg from 'public/icons/shopee.svg'
 import { Navigation } from './navigation'
 
 export const Header = () => {
   return (
-    <header className='bg-primary'>
-      <div className=' text-gray-300 hidden text-sm lg:flex items-center justify-between max-w-screen-xl w-full mx-auto py-2 px-4 2xl:px-0'>
+    <header className='bg-primary fixed top-0 left-0 right-0 z-50 border border-primary'>
+      <div className='text-gray-300 hidden text-sm lg:flex items-center justify-between max-w-screen-xl w-full mx-auto py-2 px-4 2xl:px-0'>
         <h3>
           hotline: <span className='text-base text-white'>0985.136.914</span>
         </h3>
