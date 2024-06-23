@@ -1,6 +1,6 @@
 import { ProductCard } from '@/components'
 import { Divider, Pagination } from '@/components/ui'
-import { ProductFilter } from './components/product-filter'
+import { ProductsFilter } from './components/products-filter'
 
 const ProductPage = () => {
   return (
@@ -12,7 +12,7 @@ const ProductPage = () => {
         <Divider />
       </div>
 
-      <ProductFilter />
+      <ProductsFilter />
 
       <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         <ProductCard />

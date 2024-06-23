@@ -34,8 +34,6 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = ({ open, type, onClose 
     }
   }, [open, onClose])
 
-  if (!open) return null
-
   return (
     <div
       ref={drawerRef}
@@ -43,7 +41,7 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = ({ open, type, onClose 
         open ? 'translate-y-0' : 'translate-y-full'
       }`}
     >
-      <div className='relative z-50 max-h-[50vh] w-full bg-green-50 overflow-auto'>
+      <div className='relative z-50 max-h-[50vh] lg:max-h-[30vh] w-full bg-green-50 overflow-auto'>
         <div className='fixed w-full bg-primary '>
           <div className='flex items-center w-full max-w-screen-xl mx-auto justify-between px-2 lg:px-0 py-2 text-white'>
             <h3 className='font-semibold text-lg'>

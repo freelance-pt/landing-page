@@ -16,12 +16,15 @@ export const ProductCard = ({ data, onClick }: ProductCardProps) => {
     <div className='relative w-full h-full px-2 mb-6 group cursor-pointer'>
       <div className='absolute top-0 left-2 z-20'>
         <div className='relative inline-block'>
-          <p className='bg-red-500 text-white px-4 py-2 rounded-r-md'>{`- ${formatPriceToPercent(50000, 40000)}`}</p>
+          <p className='bg-red-500 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-r-md'>{`- ${formatPriceToPercent(
+            50000,
+            40000
+          )}`}</p>
         </div>
       </div>
 
       <div className='absolute px-1 py-1 rounded top-6 right-6 z-20 bg-primary hover:bg-green-700'>
-        <HeartSvg className='h-6 w-6 text-white fill-none' />
+        <HeartSvg className='h-5 w-5 lg:h-6 lg:w-6 text-white fill-none' />
       </div>
       <div className='p-2 w-full max-w-sm bg-white border border-gray-200 rounded-lg group-hover:shadow-xl'>
         <div className='w-full h-full overflow-hidden'>

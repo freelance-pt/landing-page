@@ -13,17 +13,6 @@ export const Dropdown = ({ items, label }: DropdownProps) => {
   const toggleDropdown = () => setIsOpen(!isOpen)
   const closeDropdown = () => setIsOpen(false)
 
-  useEffect(() => {
-    const body = document.body
-    if (isOpen) {
-      body.style.overflow = 'hidden'
-      body.classList.add('blur-bg') // Assuming you have defined this class in your CSS
-    } else {
-      body.style.overflow = ''
-      body.classList.remove('blur-bg')
-    }
-  }, [isOpen])
-
   return (
     <>
       {isOpen && <div className='fixed inset-0 bg-black bg-opacity-10 z-30' onClick={closeDropdown}></div>}
