@@ -3,15 +3,17 @@ import shipSvg from 'public/icons/ship.svg'
 import moneySvg from 'public/icons/money.svg'
 import arrowDownSvg from 'public/icons/arrow-down-circle.svg'
 import teaPlantation from 'public/tea-plantation.jpeg'
-import { Carousels } from '@/components'
-import { Divider } from '@/components/ui'
 import { ProductSection } from './components/product-section'
 import { BlogSection } from './components/blog-section'
+import { Carousels } from './components/carousels'
+import { TitleSection } from './components/title-section'
+import { ReceiveEmailSection } from './components/receive-email-section'
 
 export default function Home() {
   return (
     <>
       <Carousels />
+
       <section className='w-full'>
         <div className='max-w-screen-xl mx-auto py-8 px-4 xl:px-0 grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='w-full flex items-center justify-center py-3 border-2 border-primary'>
@@ -51,14 +53,11 @@ export default function Home() {
 
       <section className='bg-green-50'>
         <div className='max-w-screen-xl mx-auto py-8 px-4 2xl:px-0'>
-          <div className='w-full text-center mb-10'>
-            <h2 className='font-curs text-primary my-3 text-2xl lg:text-4xl'>Trà Sâm Dứa Ngọc Quang</h2>
-            <p className='text-neutral-900 w-full md:w-[80%] lg:w-[54%] mx-auto text-sm lg:text-base mb-4'>
-              được dùng nguồn trà rộng khắp tại Bảo Lộc, nguyên liệu được thu mua trực tiếp tại các nhà máy chế biến trà
-              tươi, không lẫn tạp chất.
-            </p>
-            <Divider />
-          </div>
+          <TitleSection
+            title='Trà Sâm Dứa Ngọc Quang'
+            label='được dùng nguồn trà rộng khắp tại Bảo Lộc, nguyên liệu được thu mua trực tiếp tại các nhà máy chế biến trà
+              tươi, không lẫn tạp chất.'
+          />
           <div className='w-full px-4 lg:px-0 grid grid-cols-2 lg:grid-cols-4 gap-4'>
             <div className='w-full mb-5'>
               <h3 className='font-medium text-lg text-primary pb-3'>Hương liệu an toàn</h3>
@@ -103,60 +102,7 @@ export default function Home() {
 
       <BlogSection />
 
-      <section className='py-8 px-4 2xl:px-0'>
-        <div className='max-w-screen-xl w-full mx-auto '>
-          <h4 className='font-medium text-lg text-primary mb-8'>NHẬN THÔNG TIN KHUYẾN MÃI & SẢN PHẨM MỚI.</h4>
-        </div>
-        <div className='max-w-screen-xl w-full mx-auto flex flex-col lg:flex-row gap-6'>
-          <div className='w-full lg:w-6/12'>
-            <p className='text-neutral-900 pt-3 pr-0 lg:pr-12'>
-              Bạn để lại email tại đây, chúng tôi sẽ cập nhật tới bạn những thông tin mới nhất, sản phẩm mới, chương
-              trình khuyến mãi từ TràSâmDứa.com
-            </p>
-          </div>
-          <form className='w-full lg:w-6/12'>
-            <div className='grid md:grid-cols-2 md:gap-6'>
-              <div className='relative z-0 w-full mb-5 group'>
-                <input
-                  name='floating_name'
-                  id='floating_name'
-                  className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer'
-                  placeholder=' '
-                  required
-                />
-                <label
-                  htmlFor=''
-                  className='peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
-                >
-                  Tên của bạn
-                </label>
-              </div>
-              <div className='relative z-0 w-full mb-5 group'>
-                <input
-                  type='email'
-                  name='floating_email'
-                  id='floating_email'
-                  className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer'
-                  placeholder=' '
-                  required
-                />
-                <label
-                  htmlFor='floating_email'
-                  className='peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
-                >
-                  Địa chỉ email
-                </label>
-              </div>
-              <button
-                type='submit'
-                className='text-white bg-primary hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-100 font-medium rounded-lg text-sm px-2 py-2.5 text-center'
-              >
-                Gửi
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <ReceiveEmailSection />
     </>
   )
 }

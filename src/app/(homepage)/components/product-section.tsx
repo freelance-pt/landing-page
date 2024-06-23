@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { ProductCard, Tabs } from '@/components'
-import { Button, Divider } from '@/components/ui'
+import { ProductCard } from '@/components'
+import { Button, Tabs } from '@/components/ui'
 import { productCategoriesMapping } from '@/lib/contants'
+import { TitleSection } from './title-section'
 
 const TABS = Object.keys(productCategoriesMapping).map((key) => ({
   key,
@@ -20,10 +21,7 @@ export const ProductSection = () => {
   return (
     <section>
       <div className='max-w-screen-xl mx-auto py-8 px-4 2xl:px-0'>
-        <div className='w-full text-center mb-8'>
-          <h2 className='font-curs text-primary my-3 text-2xl lg:text-4xl'>Sản Phẩm Trà Sâm Dứa</h2>
-          <Divider />
-        </div>
+        <TitleSection title='Sản Phẩm Trà Sâm Dứa' />
 
         <Tabs
           className='mb-8'

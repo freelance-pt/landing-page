@@ -11,7 +11,7 @@ type LeftDrawerProps = {
   routes?: { path: string; label: string; icon?: string }[]
 }
 
-export const LeftDrawer: React.FC<LeftDrawerProps> = ({ open = true, onClose, routes }) => {
+export const LeftDrawer: React.FC<LeftDrawerProps> = ({ open, onClose, routes }) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {

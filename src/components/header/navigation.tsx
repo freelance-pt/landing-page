@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import logo from 'public/logo-green.png'
-import { LeftDrawer } from '../left-drawer'
-import { BottomDrawer } from '../bottom-drawer'
+import { BottomDrawer } from './bottom-drawer'
+import { LeftDrawer } from './left-drawer'
 
 const routes: { path: string; label: string; icon?: string }[] = [
   {
@@ -96,7 +96,12 @@ export const Navigation = () => {
           <div className='flex items-start justify-end lg:space-x-2 w-[35%]'>
             <div
               className='flex cursor-pointer items-center rounded-md py-2 px-4 text-gray-500 hover:text-primary'
-              onClick={() => setBottomDrawer({ open: true, type: 'love' })}
+              onClick={() => {
+                setBottomDrawer({
+                  open: true,
+                  type: 'love',
+                })
+              }}
             >
               <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>
                 <path
@@ -107,25 +112,31 @@ export const Navigation = () => {
               </svg>
               <span className='text-base font-medium ml-2 hidden lg:inline-block'>Yêu thích</span>
             </div>
-            <div className='flex cursor-pointer items-center rounded-md py-2 px-4 text-gray-500 hover:text-primary'>
-              <button
-                className='relative'
-                onClick={() =>
-                  setBottomDrawer({
-                    open: true,
-                    type: 'cart',
-                  })
-                }
-              >
+            <button
+              onClick={() => {
+                setBottomDrawer((prevState) => {
+                  if (prevState?.open) {
+                    return undefined // Close the drawer
+                  } else {
+                    return {
+                      open: true,
+                      type: 'cart',
+                    } // Open the drawer
+                  }
+                })
+              }}
+              className='flex cursor-pointer items-center rounded-md py-2 px-4 text-gray-500 hover:text-primary'
+            >
+              <div className='relative'>
                 <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>
                   <path d='M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z' />
                 </svg>
                 <span className='absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary p-2 text-xs text-white'>
                   3
                 </span>
-              </button>
+              </div>
               <span className='ml-2 text-base font-medium hidden lg:inline-block'>Giỏ hàng</span>
-            </div>
+            </button>
           </div>
         </div>
       </nav>
