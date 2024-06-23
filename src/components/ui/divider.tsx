@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import leafSvg from 'public/icons/leaf.svg'
+import LeafSvg from 'public/icons/leaf.svg'
 
 export const Divider = () => {
   return (
@@ -15,7 +14,7 @@ export const Divider = () => {
           />
         </svg>
       </div>
-      <Image src={leafSvg} alt='tea' width={24} height={24} />
+      <LeafSvg className='w-6 h-6 text-primary' />
       <div>
         <svg className='w-28 h-4' viewBox='0 0 1000 40' preserveAspectRatio='none'>
           <path

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import shopeeSvg from 'public/icons/shopee.svg'
 import { Navigation } from './navigation'
 
@@ -11,7 +10,7 @@ export const Header = () => {
           hotline: <span className='text-base text-white'>0985.136.914</span>
         </h3>
         <div className='flex items-center justify-end gap-4'>
-          <Link href={'/'}>
+          {/* <Link href={'/'}>
             <Image src={shopeeSvg} alt='shopee' width={24} height={24} />
           </Link>
           <Link href={'/'}>
@@ -19,7 +18,7 @@ export const Header = () => {
           </Link>
           <Link href={'/'}>
             <Image src={shopeeSvg} alt='shopee' width={24} height={24} />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <Navigation />

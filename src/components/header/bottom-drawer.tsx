@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import closeSvg from 'public/icons/close.svg'
+import CloseSvg from 'public/icons/close.svg'
 
 type BottomDrawerProps = {
   open?: boolean
@@ -51,7 +50,7 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = ({ open, type, onClose 
               {type === 'cart' ? `Giỏ hàng của bạn` : 'Danh sách sản phẩm yêu thích'}
             </h3>
             <button className='-m-2 p-2' onClick={onClose}>
-              <Image src={closeSvg} alt='close' width={16} height={16} />
+              <CloseSvg className='h-5 w-5' />
             </button>
           </div>
         </div>

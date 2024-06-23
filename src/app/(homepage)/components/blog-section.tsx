@@ -43,7 +43,7 @@ export const BlogSection = () => {
           <BlogCard />
         </div>
 
-        <button className='my-10 px-6 py-2 bg-green-50 uppercase font-semibold block mx-auto hover:bg-primary hover:text-white transition duration-200 ease-in'>
+        <button className='my-10 px-6 py-2 bg-green-50 uppercase text-primary font-semibold block mx-auto hover:bg-primary hover:text-white transition duration-200 ease-in'>
           xem thêm
         </button>
       </div>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import shipSvg from 'public/icons/ship.svg'
-import moneySvg from 'public/icons/money.svg'
-import arrowDownSvg from 'public/icons/arrow-down-circle.svg'
+import ShipSvg from 'public/icons/ship.svg'
+import MoneySvg from 'public/icons/money.svg'
+import ArrowDownSvg from 'public/icons/arrow-down-circle.svg'
 import teaPlantation from 'public/tea-plantation.jpeg'
 import { ProductSection } from './components/product-section'
 import { BlogSection } from './components/blog-section'
@@ -17,7 +17,7 @@ export default function Home() {
       <section className='w-full'>
         <div className='max-w-screen-xl mx-auto py-8 px-4 xl:px-0 grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='w-full flex items-center justify-center py-3 border-2 border-primary'>
-            <Image src={shipSvg} alt='shipping' width={56} height={56} className='text-primary' />
+            <ShipSvg className='text-primary h-14 w-14' />
             <div className='ml-4'>
               <h3 className='font-sm uppercase text-primary font-semibold mb-1'>Giao hàng nhanh chóng</h3>
               <p className='text-neutral-900'>
@@ -28,7 +28,7 @@ export default function Home() {
             </div>
           </div>
           <div className='w-full flex items-center justify-center py-3 border-2 border-primary'>
-            <Image src={moneySvg} alt='save' width={56} height={56} className='text-primary' />
+            <MoneySvg className='text-primary h-14 w-14' />
             <div className='ml-4'>
               <h3 className='font-sm uppercase text-primary font-semibold mb-1'>Tiết kiệm chi phí</h3>
               <p className='text-neutral-900'>
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
           <div className='w-full flex items-center justify-center border-2 border-primary py-3'>
-            <Image src={arrowDownSvg} alt='good quality' width={56} height={56} className='text-primary' />
+            <ArrowDownSvg className='text-primary h-14 w-14' />
             <div className='ml-4'>
               <h3 className='font-sm uppercase text-primary font-semibold mb-1'>Đảm bảo chất lượng</h3>
               <p className='text-neutral-900'>

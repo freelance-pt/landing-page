@@ -1,9 +1,8 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import closeSvg from 'public/icons/close.svg'
+import CloseSvg from 'public/icons/close.svg'
 
 type LeftDrawerProps = {
   open?: boolean
@@ -39,8 +38,8 @@ export const LeftDrawer: React.FC<LeftDrawerProps> = ({ open, onClose, routes })
           <h3>
             hotline: <span className='text-base text-white'>0985.136.914</span>
           </h3>
-          <button onClick={onClose}>
-            <Image src={closeSvg} alt='close' width={16} height={16} />
+          <button className='flex items-center justify-center' onClick={onClose}>
+            <CloseSvg className='h-5 w-5' />
           </button>
         </div>
         <ul>
