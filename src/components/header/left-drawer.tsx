@@ -45,7 +45,11 @@ export const LeftDrawer: React.FC<LeftDrawerProps> = ({ open, onClose, routes })
         <ul>
           {routes?.map((route, index) => (
             <li className='my-3' key={index}>
-              <Link href={route.path} className='text-lg font-semibold text-neutral-900 hover:text-primary uppercase'>
+              <Link
+                href={route.path}
+                className='text-lg font-semibold text-neutral-900 hover:text-primary uppercase'
+                onClick={() => onClose?.()}
+              >
                 {route.label}
               </Link>
             </li>

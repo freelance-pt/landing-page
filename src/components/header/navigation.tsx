@@ -10,6 +10,7 @@ import CartSvg from 'public/icons/cart.svg'
 import BurgerMenu from 'public/icons/burger-menu.svg'
 import { LeftDrawer } from './left-drawer'
 import { BottomDrawer } from './bottom-drawer'
+import { Modal } from './modal'
 
 const routes: { path: string; label: string; icon?: string }[] = [
   {
@@ -29,6 +30,7 @@ const routes: { path: string; label: string; icon?: string }[] = [
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const [bottomDrawer, setBottomDrawer] = useState<{ open: boolean; type: 'cart' | 'love' }>()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -41,6 +43,7 @@ export const Navigation = () => {
 
   return (
     <>
+      <Modal open={visibleModal} onClose={() => setVisibleModal(false)} />
       <LeftDrawer open={isMenuOpen} onClose={() => setIsMenuOpen(false)} routes={routes} />
       <BottomDrawer
         open={bottomDrawer?.open && !!bottomDrawer?.type}
@@ -86,8 +89,9 @@ export const Navigation = () => {
               <Image className='block w-auto h-12 lg:h-14' src={logo} alt='logo' width={48} height={48} />
             </Link>
           </div>
+
           <div className='flex items-start justify-end lg:space-x-2 w-[35%]'>
-            <div
+            <button
               className='flex cursor-pointer items-center rounded-md py-2 px-4 text-gray-500 hover:text-primary'
               onClick={() => {
                 setBottomDrawer({
@@ -98,21 +102,10 @@ export const Navigation = () => {
             >
               <HeartSvg className='w-5 h-5 fill-none' />
               <span className='text-base font-medium ml-2 hidden lg:inline-block'>Yêu thích</span>
-            </div>
+            </button>
             <button
-              onClick={() => {
-                setBottomDrawer((prevState) => {
-                  if (prevState?.open) {
-                    return undefined // Close the drawer
-                  } else {
-                    return {
-                      open: true,
-                      type: 'cart',
-                    } // Open the drawer
-                  }
-                })
-              }}
               className='flex cursor-pointer items-center rounded-md py-2 px-4 text-gray-500 hover:text-primary'
+              onClick={() => setVisibleModal(true)}
             >
               <div className='relative'>
                 <CartSvg className='w-5 h-5 fill-none' />

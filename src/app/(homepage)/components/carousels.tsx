@@ -30,7 +30,7 @@ export const Carousels = () => {
     <section>
       <div id='default-carousel' className='relative w-full max-w-screen-xl mx-auto' data-carousel='slide'>
         {/* Carousel wrapper */}
-        <div className='relative h-56 overflow-hidden md:h-96'>
+        <div className='relative overflow-hidden aspect-[2.39/1] w-full'>
           {items.map((item, index) => (
             <div
               key={index}
@@ -41,11 +41,11 @@ export const Carousels = () => {
                 src={item}
                 className='absolute block w-full min-h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
                 alt={`Slide ${index + 1}`}
+                objectFit='cover'
               />
             </div>
           ))}
         </div>
-
         {/* Slider indicators */}
         <div className='absolute z-30 hidden lg:flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse'>
           {items.map((_, index) => (

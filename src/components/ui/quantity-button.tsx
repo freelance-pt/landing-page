@@ -25,9 +25,8 @@ export const QuantityButton = () => {
           data-input-counter-min={1}
           data-input-counter-max={50}
           aria-describedby='helper-text-explanation'
-          className='bg-gray-50 border-x-0 border-gray-300 text-center border text-gray-900 text-sm block w-full focus:outline-none'
+          className='bg-gray-50 border-x-0 rounded-none border-gray-300 text-center border text-gray-900 text-sm block w-full focus:outline-none'
           defaultValue={5}
-          required
         />
         <button
           type='button'

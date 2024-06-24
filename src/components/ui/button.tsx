@@ -30,9 +30,7 @@ export const Button = ({
       className={cn(
         `px-2 py-1 flex items-center justify-center rounded-md font-sm text-sm transition-colors duration-300 ${
           disabled ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : buttonType
-        }
-    focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-opacity-75
-  `,
+        } focus:outline-none`,
         className
       )}
       disabled={disabled}
