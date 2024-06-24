@@ -1,4 +1,5 @@
 import { BlogCard } from '@/components/blog-card'
+import { Button } from '@/components/ui'
 import { TitleSection } from './title-section'
 
 export const BlogSection = () => {
@@ -7,45 +8,19 @@ export const BlogSection = () => {
       <div className='max-w-screen-xl mx-auto'>
         <TitleSection title='Blog & Tin Tức' />
 
-        <div className='my-3 border-l-2 lg:border-l-4 border-solid border-primary'>
-          <h3 className='pl-4 text-xl lg:text-2xl font-senibold lg:font-bold text-neutral-900 hover:text-primary cursor-pointer'>
-            Blog
-          </h3>
+        <div className='flex flex-col md:flex-row gap-8'>
+          <div className='w-full h-full md:w-1/2 flex flex-col justify-between'>
+            <BlogCard className='lg:w-full' />
+            <Button className='w-48 py-3 px-4 mx-4' type='primary'>
+              Đọc thêm
+            </Button>
+          </div>
+          <div className='w-full md:w-1/2 flex flex-col gap-4'>
+            <BlogCard layout='horizontal' />
+            <BlogCard layout='horizontal' />
+            <BlogCard layout='horizontal' />
+          </div>
         </div>
-
-        <div className='mt-8 flex flex-col lg:flex-row flex-wrap'>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-        </div>
-
-        <div className='my-3 border-l-2 lg:border-l-4 border-solid border-primary'>
-          <h3 className='pl-4 text-xl lg:text-2xl font-senibold lg:font-bold text-neutral-900 hover:text-primary cursor-pointer'>
-            Góc tư vấn
-          </h3>
-        </div>
-
-        <div className='mt-8 flex flex-col lg:flex-row flex-wrap'>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-        </div>
-
-        <div className='my-3 border-l-2 lg:border-l-4 border-solid border-primary'>
-          <h3 className='pl-4 text-xl lg:text-2xl font-senibold lg:font-bold text-neutral-900 transform hover:text-primary cursor-pointer'>
-            Trà và sức khỏe
-          </h3>
-        </div>
-
-        <div className='mt-8 flex flex-col lg:flex-row flex-wrap'>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-        </div>
-
-        <button className='my-10 px-6 py-2 bg-green-50 uppercase text-primary font-semibold block mx-auto hover:bg-primary hover:text-white transition duration-200 ease-in'>
-          xem thêm
-        </button>
       </div>
     </section>
   )

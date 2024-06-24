@@ -60,51 +60,19 @@ export const Footer = ({ isCartLayout }: FooterProps) => {
               <div>
                 <h2 className='mb-6 text-sm font-semibold text-primary uppercase'>THÔNG TIN</h2>
                 <ul className='text-gray-500 font-medium'>
-                  <li className='mb-4'>
-                    <a href='https://flowbite.com/' className='hover:underline'>
-                      Thông tin công ty
-                    </a>
-                  </li>
-                  <li className='mb-4'>
-                    <a href='https://tailwindcss.com/' className='hover:underline'>
-                      Tuyển dụng
-                    </a>
-                  </li>
-                  <li className='mb-4'>
-                    <a href='https://tailwindcss.com/' className='hover:underline'>
-                      Chính sách đại lý
-                    </a>
-                  </li>
-                  <li className='mb-4'>
-                    <a href='https://tailwindcss.com/' className='hover:underline'>
-                      Câu hỏi thường gặp
-                    </a>
-                  </li>
-                  <li className='mb-4'>
-                    <a href='https://tailwindcss.com/' className='hover:underline'>
-                      Hướng dẫn đặt hàng
-                    </a>
-                  </li>
+                  <li className='mb-4'>Thông tin công ty</li>
+                  <li className='mb-4'>Tuyển dụng</li>
+                  <li className='mb-4'>Chính sách đại lý</li>
+                  <li className='mb-4'>Câu hỏi thường gặp</li>
+                  <li className='mb-4'>Hướng dẫn đặt hàng</li>
                 </ul>
               </div>
               <div>
                 <h2 className='mb-6 text-sm font-semibold text-primary uppercase'>HỖ TRỢ</h2>
                 <ul className='text-gray-500 font-medium'>
-                  <li className='mb-4'>
-                    <a href='https://github.com/themesberg/flowbite' className='hover:underline '>
-                      Dịch vụ sau bán hàng
-                    </a>
-                  </li>
-                  <li className='mb-4'>
-                    <a href='https://github.com/themesberg/flowbite' className='hover:underline '>
-                      Hướng dẫn khách hàng
-                    </a>
-                  </li>
-                  <li>
-                    <a href='https://discord.gg/4eeurUVvTy' className='hover:underline'>
-                      Câu hỏi thường gặp
-                    </a>
-                  </li>
+                  <li className='mb-4'>Dịch vụ sau bán hàng</li>
+                  <li className='mb-4'>Hướng dẫn khách hàng</li>
+                  <li>Câu hỏi thường gặp</li>
                 </ul>
               </div>
             </div>

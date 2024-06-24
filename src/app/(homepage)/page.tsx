@@ -14,36 +14,34 @@ export default function Home() {
       <Carousels />
 
       <section className='w-full'>
-        <div className='max-w-screen-xl mx-auto py-8 px-4 xl:px-0 grid grid-cols-1 lg:grid-cols-3 gap-8'>
-          <div className='w-full flex items-center justify-center py-3 border-2 border-primary'>
-            <ShipSvg className='text-primary h-14 w-14' />
-            <div className='ml-4'>
-              <h3 className='font-sm uppercase text-primary font-semibold mb-1'>Giao hàng nhanh chóng</h3>
-              <p className='text-neutral-900'>
-                Miễn phí giao hàng cho
-                <br />
-                đơn hàng trên 500k
+        <div className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8'>
+          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
+            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
+            <div className='relative'>
+              <ShipSvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
+              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Giao hàng nhanh chóng</h3>
+              <p className='mt-2 text-base text-primary group-hover:text-white  '>
+                Miễn phí giao hàng cho đơn hàng trên 500k
               </p>
             </div>
           </div>
-          <div className='w-full flex items-center justify-center py-3 border-2 border-primary'>
-            <MoneySvg className='text-primary h-14 w-14' />
-            <div className='ml-4'>
-              <h3 className='font-sm uppercase text-primary font-semibold mb-1'>Tiết kiệm chi phí</h3>
-              <p className='text-neutral-900'>
-                Giá cả hợp lý không qua <br />
-                khâu trung gian
+          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
+            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
+            <div className='relative'>
+              <MoneySvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
+              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Tiết kiệm chi phí</h3>
+              <p className='mt-2 text-base text-primary group-hover:text-white  '>
+                Giá cả hợp lý không qua khâu trung gian
               </p>
             </div>
           </div>
-          <div className='w-full flex items-center justify-center border-2 border-primary py-3'>
-            <ArrowDownSvg className='text-primary h-14 w-14' />
-            <div className='ml-4'>
-              <h3 className='font-sm uppercase text-primary font-semibold mb-1'>Đảm bảo chất lượng</h3>
-              <p className='text-neutral-900'>
-                Sử dụng hương liệu an toàn,
-                <br />
-                không hoá chất
+          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
+            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
+            <div className='relative'>
+              <ArrowDownSvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
+              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Đảm bảo chất lượng</h3>
+              <p className='mt-2 text-base text-primary group-hover:text-white  '>
+                Sử dụng hương liệu an toàn, không hoá chất
               </p>
             </div>
           </div>
@@ -57,7 +55,7 @@ export default function Home() {
             label='được dùng nguồn trà rộng khắp tại Bảo Lộc, nguyên liệu được thu mua trực tiếp tại các nhà máy chế biến trà
               tươi, không lẫn tạp chất.'
           />
-          <div className='w-full px-4 lg:px-0 grid grid-cols-2 lg:grid-cols-4 gap-4'>
+          <div className='w-full mt-6 px-4 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
             <div className='w-full mb-5'>
               <h3 className='font-medium text-lg text-primary pb-3'>Hương liệu an toàn</h3>
               <p className='text-neutral-900'>
