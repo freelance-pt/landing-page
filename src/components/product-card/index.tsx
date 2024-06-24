@@ -42,10 +42,8 @@ export const ProductCard = ({ data, onClick }: ProductCardProps) => {
             <span className='text-base lg:text-lg font-medium lg:font-bold text-primary'>{formatPrice(40000)}</span>
             <span className='text-sm font-light text-neutral-800 ml-2 line-through'>{`(${formatPrice(50000)})`}</span>
           </div>
-          <div className='flex items-center justify-between'>
-            <QuantityButton />
-            <Button>Mua ngay</Button>
-          </div>
+
+          <Button className='hidden lg:block w-full'>Mua ngay</Button>
         </div>
       </div>
     </div>

@@ -38,9 +38,11 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = ({ open, type, onClose 
   return (
     <div
       ref={drawerRef}
-      className={`fixed inset-x-0 bottom-0 z-50 overflow-hidden transition-transform transform duration-700 ${
-        open ? 'translate-y-0' : 'translate-y-full'
-      }`}
+      className={`${
+        open
+          ? 'fixed inset-x-0 bottom-0 z-50 overflow-hidden translate-y-0'
+          : 'hidden inset-x-0 bottom-0 z-50 overflow-hidden translate-y-full'
+      } transition-transform duration-700 ease-out`}
     >
       <div className='relative z-50 max-h-[60vh] lg:max-h-[50vh] w-full bg-green-50 overflow-auto'>
         <div className='fixed w-full bg-primary '>
@@ -61,7 +63,6 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = ({ open, type, onClose 
           </div>
         </div>
       </div>
-      {/* <div className='fixed inset-0' onClick={onClose} /> */}
     </div>
   )
 }

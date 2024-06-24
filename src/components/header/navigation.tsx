@@ -45,11 +45,7 @@ export const Navigation = () => {
     <>
       <Modal open={visibleModal} onClose={() => setVisibleModal(false)} />
       <LeftDrawer open={isMenuOpen} onClose={() => setIsMenuOpen(false)} routes={routes} />
-      <BottomDrawer
-        open={bottomDrawer?.open && !!bottomDrawer?.type}
-        type={bottomDrawer?.type}
-        onClose={() => setBottomDrawer(undefined)}
-      />
+
       <nav className='antialiased bg-green-50'>
         <div className='max-w-screen-xl flex items-center justify-between px-4 mx-auto 2xl:px-0 py-4'>
           <div className='flex items-center w-[35%]'>
@@ -118,6 +114,11 @@ export const Navigation = () => {
           </div>
         </div>
       </nav>
+      <BottomDrawer
+        open={bottomDrawer?.open && !!bottomDrawer?.type}
+        type={bottomDrawer?.type}
+        onClose={() => setBottomDrawer(undefined)}
+      />
     </>
   )
 }

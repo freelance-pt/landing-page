@@ -2,10 +2,14 @@ import Image from 'next/image'
 import logo from 'public/logo-green.png'
 import { ReceiveEmailSection } from './receive-email-section'
 
-export const Footer = () => {
+type FooterProps = {
+  isCartLayout?: boolean
+}
+
+export const Footer = ({ isCartLayout }: FooterProps) => {
   return (
     <>
-      <ReceiveEmailSection />
+      {!isCartLayout ? <ReceiveEmailSection /> : null}
       <footer className='bg-green-50 font-sans'>
         <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
           <div className='md:flex md:justify-between'>
