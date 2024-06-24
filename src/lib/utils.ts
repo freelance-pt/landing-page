@@ -13,3 +13,8 @@ export const formatPriceToPercent = (oldPrice: number, newPrice: number, decimal
   const percent = ((oldPrice - newPrice) / oldPrice) * 100
   return percent.toFixed(decimalPlaces) + '%'
 }
+
+export const getRandomElement = <T>(array: T[]): T => {
+  const randomIndex = Math.floor(Math.random() * array.length)
+  return array[randomIndex]
+}

@@ -1,9 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 type DropdownProps = {
-  items?: any[]
+  items?: {
+    key: string
+    label: string
+  }[]
   label: string
 }
 
@@ -15,7 +18,7 @@ export const Dropdown = ({ items, label }: DropdownProps) => {
 
   return (
     <>
-      {isOpen && <div className='fixed inset-0 bg-black bg-opacity-10 z-30' onClick={closeDropdown}></div>}
+      {isOpen && <div className='fixed inset-0 bg-black bg-opacity-20 z-30' onClick={closeDropdown}></div>}
       <div className='relative'>
         <button
           id='dropdownCheckboxButton'
@@ -38,19 +41,26 @@ export const Dropdown = ({ items, label }: DropdownProps) => {
 
         <div
           id='dropdownDefaultCheckbox'
-          className={`${isOpen ? '' : 'hidden'} z-30 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow absolute`}
+          className={`${isOpen ? '' : 'hidden'} z-30 w-48 bg-white divide-y divide-gray-100 rounded shadow absolute`}
         >
           <ul className='p-3 space-y-3 text-sm text-gray-700' aria-labelledby='dropdownCheckboxButton'>
             <li>
-              <div className='flex items-center'>
-                <input
+              <div className='flex flex-col items-start gap-2'>
+                {/* <input
                   id='checkbox-item-3'
                   type='checkbox'
                   className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500'
-                />
-                <label htmlFor='checkbox-item-3' className='ms-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  Default checkbox
-                </label>
+                /> */}
+                {items?.map((i) => (
+                  <label
+                    key={i.key}
+                    htmlFor='checkbox-item-3'
+                    className='ms-2 text-left text-sm font-medium text-gray-900 hover:text-primary cursor-pointer'
+                    onClick={closeDropdown}
+                  >
+                    {i.label}
+                  </label>
+                ))}
               </div>
             </li>
           </ul>

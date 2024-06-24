@@ -4,10 +4,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import logo from 'public/logo-green.png'
 import HeartSvg from 'public/icons/heart.svg'
 import CartSvg from 'public/icons/cart.svg'
 import BurgerMenu from 'public/icons/burger-menu.svg'
+import { useWindowSize } from '@/lib/hooks'
 import { LeftDrawer } from './left-drawer'
 import { BottomDrawer } from './bottom-drawer'
 import { Modal } from './modal'
@@ -25,6 +27,10 @@ const routes: { path: string; label: string; icon?: string }[] = [
     path: '/blogs',
     label: 'Blog & Tin tức',
   },
+  {
+    path: '/cart',
+    label: 'Giỏ hàng',
+  },
 ]
 
 export const Navigation = () => {
@@ -32,6 +38,10 @@ export const Navigation = () => {
   const [bottomDrawer, setBottomDrawer] = useState<{ open: boolean; type: 'cart' | 'love' }>()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const pathname = usePathname()
+  const { width } = useWindowSize()
+  const router = useRouter()
+
+  const isMobile = width && width < 720
 
   useEffect(() => {
     if (isMenuOpen || (bottomDrawer?.open && !!bottomDrawer?.type)) {
@@ -66,18 +76,20 @@ export const Navigation = () => {
               <BurgerMenu className='w-6 h-6' />
             </button>
             <ul className='hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center'>
-              {routes.map((route) => (
-                <li key={route.path}>
-                  <Link
-                    href={route.path}
-                    className={`flex text-base uppercase font-semibold ${
-                      route.path === pathname ? 'text-primary' : 'text-gray-900'
-                    } hover:text-primary`}
-                  >
-                    {route.label}
-                  </Link>
-                </li>
-              ))}
+              {routes
+                .filter((i) => i.path !== '/cart')
+                .map((route) => (
+                  <li key={route.path}>
+                    <Link
+                      href={route.path}
+                      className={`flex text-base uppercase font-semibold ${
+                        route.path === pathname ? 'text-primary' : 'text-gray-900'
+                      } hover:text-primary`}
+                    >
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
           <div className='w-[30%] flex justify-center'>
@@ -101,7 +113,13 @@ export const Navigation = () => {
             </button>
             <button
               className='flex cursor-pointer items-center rounded-md py-2 px-4 text-gray-500 hover:text-primary'
-              onClick={() => setVisibleModal(true)}
+              onClick={() => {
+                if (isMobile) {
+                  router.push('/cart')
+                } else {
+                  setVisibleModal(true)
+                }
+              }}
             >
               <div className='relative'>
                 <CartSvg className='w-5 h-5 fill-none' />

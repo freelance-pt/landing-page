@@ -5,10 +5,11 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import banner1 from 'public/banner-tra-sam-dua-1.jpg'
 import banner2 from 'public/banner-tra-sam-dua-2.jpg'
+import banner3 from 'public/banner-tra-sam-dua-3.jpg'
 
 export const Carousels = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
-  const items = [banner1, banner2, banner1, banner2]
+  const items = [banner1, banner2, banner3]
 
   useEffect(() => {
     const interval = setInterval(() => {

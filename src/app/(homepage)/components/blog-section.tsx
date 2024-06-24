@@ -1,6 +1,10 @@
-import { BlogCard } from '@/components/blog-card'
+import dynamic from 'next/dynamic'
 import { Button } from '@/components/ui'
 import { TitleSection } from './title-section'
+
+const BlogCard = dynamic(() => import('@/components/blog-card').then((mod) => mod.BlogCard), {
+  ssr: false,
+})
 
 export const BlogSection = () => {
   return (

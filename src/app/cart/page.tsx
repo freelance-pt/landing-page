@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import { BoxShoppingCart } from '@/components/boxes-shopping-cart'
 import { formatPrice } from '@/lib/utils'
+import { Button } from '@/components/ui'
 import { ShippingAddressForm } from './components/shipping-address-form'
 
 const CartPage = () => {
@@ -10,6 +12,9 @@ const CartPage = () => {
           <div className=' mt-6 border-b-2 border-primary' />
           <p className='mt-2 text-neutral-600 py-4 italic'>Hiện có 3 sản phẩm trong giỏ hàng:</p>
           <BoxShoppingCart />
+          <Link href='/'>
+            <Button className='mt-6 px-4'>{'< Tiếp tục mua sắm'}</Button>
+          </Link>
         </div>
         <div className='w-full lg:w-1/2 px-0 lg:px-6'>
           <div className='w-full border-t-primary border-t-4 rounded-t-sm rounded-b-xl bg-green-50 p-4 lg:p-6'>

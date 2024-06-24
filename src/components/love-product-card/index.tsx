@@ -1,11 +1,21 @@
+'use client'
+
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { formatPrice } from '@/lib/utils'
 import sp1 from 'public/sp1.jpeg'
 import { Button } from '../ui'
 
 export const LoveProductCard = () => {
+  const router = useRouter()
+
   return (
-    <div className='flex h-36 lg:h-48 items-center group bg-white border border-gray-200 rounded-lg shadow'>
+    <div
+      className='cursor-pointer flex h-36 lg:h-48 items-center group bg-white border border-gray-200 rounded-lg shadow'
+      onClick={() => {
+        router.push('/products/tra-sam-dua-ngoc-quang')
+      }}
+    >
       <div className='h-full aspect-square'>
         <Image className='h-full rounded-l-lg' src={sp1} objectFit='cover' alt='product image' />
       </div>

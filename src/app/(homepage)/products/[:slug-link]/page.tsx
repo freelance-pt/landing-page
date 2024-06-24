@@ -50,9 +50,11 @@ const ProductDetails = () => {
               <button className='px-4 py-2 rounded bg-white border border-primary uppercase text-primary font-semibold block hover:bg-green-50 transition duration-200 ease-in'>
                 Thêm vào giỏ hàng
               </button>
-              <button className='px-4 py-2 rounded bg-primary uppercase text-white font-semibold block hover:bg-green-800 transition duration-200 ease-in'>
-                Liên hệ
-              </button>
+              <Link href='/cart'>
+                <button className='px-4 py-2 rounded bg-primary uppercase text-white font-semibold block hover:bg-green-800 transition duration-200 ease-in'>
+                  Mua ngay
+                </button>
+              </Link>
             </div>
           </div>
         </div>

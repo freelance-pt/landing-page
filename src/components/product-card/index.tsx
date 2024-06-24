@@ -1,9 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import sp1 from 'public/sp1.jpeg'
 import sp2 from 'public/sp2.png'
+import sp3 from 'public/sp3.png'
+import sp4 from 'public/sp4.jpg'
 import HeartSvg from 'public/icons/heart.svg'
-import { formatPrice, formatPriceToPercent } from '@/lib/utils'
+import { formatPrice, formatPriceToPercent, getRandomElement } from '@/lib/utils'
 import { QuantityButton, Button } from '../ui'
 
 type ProductCardProps = {
@@ -12,8 +17,12 @@ type ProductCardProps = {
 }
 
 export const ProductCard = ({ data, onClick }: ProductCardProps) => {
+  const router = useRouter()
   return (
-    <div className='relative w-full h-full px-2 mb-6 group cursor-pointer'>
+    <div
+      className='relative w-full h-full px-2 mb-6 group cursor-pointer'
+      onClick={() => router.push('/products/tra-sam-dua-ngoc-quang')}
+    >
       <div className='absolute top-0 left-2 z-20'>
         <div className='relative inline-block'>
           <p className='bg-red-500 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-r-md'>{`- ${formatPriceToPercent(
@@ -27,10 +36,11 @@ export const ProductCard = ({ data, onClick }: ProductCardProps) => {
         <HeartSvg className='h-5 w-5 lg:h-6 lg:w-6 text-white fill-none' />
       </div>
       <div className='p-2 w-full max-w-sm bg-white border border-gray-200 rounded-lg group-hover:shadow-xl'>
-        <div className='w-full h-full overflow-hidden'>
+        <div className='w-full h-full aspect-square overflow-hidden'>
           <Image
             className='transition-transform duration-300 ease-in-out group-hover:scale-110 origin-center'
-            src={sp1}
+            src={getRandomElement([sp1, sp2, sp3])}
+            objectFit='cover'
             alt='product image'
           />
         </div>
@@ -43,7 +53,7 @@ export const ProductCard = ({ data, onClick }: ProductCardProps) => {
             <span className='text-sm font-light text-neutral-800 ml-2 line-through'>{`(${formatPrice(50000)})`}</span>
           </div>
 
-          <Button className='hidden lg:block w-full'>Mua ngay</Button>
+          <Button className='w-full'>Thêm vào giỏ hàng</Button>
         </div>
       </div>
     </div>

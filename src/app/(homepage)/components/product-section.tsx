@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { ProductCard } from '@/components'
 import { Button, Tabs } from '@/components/ui'
 import { productCategoriesMapping } from '@/lib/contants'
@@ -12,6 +13,7 @@ const TABS = Object.keys(productCategoriesMapping).map((key) => ({
 }))
 
 export const ProductSection = () => {
+  const router = useRouter()
   const [activeTab, setActiveTab] = useState<string>(TABS[0].key)
 
   const onChangeTab = (tab: string) => {
@@ -29,7 +31,10 @@ export const ProductSection = () => {
           activeTab={activeTab}
           onChangeTab={onChangeTab}
           aditionalButton={
-            <Button className='border-none flex items-center gap-1 hover:gap-2 hover:bg-transparent duration-200 ease-in-out'>
+            <Button
+              className='border-none flex items-center gap-1 hover:gap-2 hover:bg-transparent duration-200 ease-in-out'
+              onClick={() => router.push('/products')}
+            >
               <span>Xem tất cả sản phẩm</span>
               <span>
                 <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>

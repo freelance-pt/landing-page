@@ -93,14 +93,6 @@ export const BoxShoppingCart = () => {
           <p className='font-medium text-neutral-900'>Tổng cộng:</p>
           <p className='text-2xl font-semibold text-neutral-900'>{formatPrice(400000)}</p>
         </div>
-        <div className='mt-6 text-center'>
-          <button
-            type='button'
-            className='uppercase w-full rounded-md bg-primary px-6 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out hover:bg-gray-800 focus:shadow'
-          >
-            Đi đến trang thanh toán
-          </button>
-        </div>
       </div>
     </div>
   )

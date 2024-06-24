@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import CloseSvg from 'public/icons/close.svg'
 import { BoxShoppingCart } from '../boxes-shopping-cart'
+import { Button } from '../ui'
 
 type ModalProps = {
   open?: boolean
@@ -8,6 +10,8 @@ type ModalProps = {
 }
 
 export const Modal = ({ open, onClose }: ModalProps) => {
+  const router = useRouter()
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
@@ -33,8 +37,23 @@ export const Modal = ({ open, onClose }: ModalProps) => {
             <CloseSvg className='h-4 w-4' />
           </button>
         </div>
-        <div className='mt-6'>
+        <div className='my-6'>
           <BoxShoppingCart />
+        </div>
+        <div className='flex pt-6 items-center justify-between border-t border-t-neutral-00'>
+          <Button className='px-3 py-2' onClick={onClose}>
+            Tiếp tục mua hàng
+          </Button>
+          <Button
+            className='px-3 py-2'
+            type='primary'
+            onClick={() => {
+              router.push('/cart')
+              onClose?.()
+            }}
+          >
+            Đi đến giỏ hàng
+          </Button>
         </div>
       </div>
     </div>

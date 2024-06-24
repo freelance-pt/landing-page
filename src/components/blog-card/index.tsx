@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import blogImage from 'public/tea-plantation.jpeg'
 
@@ -9,8 +12,13 @@ type BlogCardProps = {
 }
 
 export const BlogCard = ({ className, layout = 'vertical', imageHeight = 'h-48' }: BlogCardProps) => {
+  const router = useRouter()
+
   return (
-    <div className={cn('w-full px-0 lg:px-4 mb-8 group', className)}>
+    <div
+      className={cn('w-full px-0 lg:px-4 mb-8 group cursor-pointer', className)}
+      onClick={() => router.push('/blogs/blog-title')}
+    >
       <div
         className={`bg-white group-hover:shadow-lg rounded-lg overflow-hidden ${layout === 'horizontal' ? 'flex' : ''}`}
       >

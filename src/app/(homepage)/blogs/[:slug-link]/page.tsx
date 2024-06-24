@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BlogCard } from '@/components'
+import dynamic from 'next/dynamic'
 import tea from 'public/tea-plantation.jpeg'
+
+const BlogCard = dynamic(() => import('@/components/blog-card').then((mod) => mod.BlogCard), {
+  ssr: false,
+})
 
 const BlogDetail = () => {
   return (

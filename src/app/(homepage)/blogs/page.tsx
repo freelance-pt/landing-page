@@ -1,5 +1,10 @@
-import { BlogCard } from '@/components'
+import dynamic from 'next/dynamic'
 import { Divider, Pagination } from '@/components/ui'
+import { BlogsFilter } from './components/blogs-filter'
+
+const BlogCard = dynamic(() => import('@/components/blog-card').then((mod) => mod.BlogCard), {
+  ssr: false,
+})
 
 const BlogsPage = () => {
   return (
@@ -8,6 +13,7 @@ const BlogsPage = () => {
         <h1 className='text-2xl lg:text-3xl py-2 text-primary font-semibold capitalize font-curs'>Blog & Tin tức</h1>
         <Divider />
       </div>
+      <BlogsFilter />
       <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         <BlogCard />
         <BlogCard />
