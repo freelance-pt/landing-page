@@ -48,6 +48,8 @@ export default function Home() {
         </div>
       </section>
 
+      <ProductSection />
+
       <section className='bg-green-50'>
         <div className='max-w-screen-xl mx-auto py-8 px-4 2xl:px-0'>
           <TitleSection
@@ -87,9 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ProductSection />
-
-      <section>
+      <section className='mt-8'>
         <Image
           src={teaPlantation}
           alt='Banner'
