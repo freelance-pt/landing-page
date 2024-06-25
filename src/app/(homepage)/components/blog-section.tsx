@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import { Button } from '@/components/ui'
 import { TitleSection } from './title-section'
 
@@ -15,9 +16,11 @@ export const BlogSection = () => {
         <div className='flex flex-col md:flex-row gap-8'>
           <div className='w-full h-full md:w-1/2 flex flex-col justify-between'>
             <BlogCard className='lg:w-full' />
-            <Button className='w-48 py-3 px-4 mx-4' type='primary'>
-              Đọc thêm
-            </Button>
+            <Link href='/blogs'>
+              <Button className='w-48 py-3 px-4 mx-4' type='primary'>
+                Đọc thêm
+              </Button>
+            </Link>
           </div>
           <div className='w-full md:w-1/2 flex flex-col gap-4'>
             <BlogCard layout='horizontal' />
