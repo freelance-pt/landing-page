@@ -13,41 +13,6 @@ export default function Home() {
     <>
       <Carousels />
 
-      <section className='w-full'>
-        <div className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8'>
-          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
-            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
-            <div className='relative'>
-              <ShipSvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
-              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Giao hàng nhanh chóng</h3>
-              <p className='mt-2 text-base text-primary group-hover:text-white  '>
-                Miễn phí giao hàng cho đơn hàng trên 500k
-              </p>
-            </div>
-          </div>
-          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
-            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
-            <div className='relative'>
-              <MoneySvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
-              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Tiết kiệm chi phí</h3>
-              <p className='mt-2 text-base text-primary group-hover:text-white  '>
-                Giá cả hợp lý không qua khâu trung gian
-              </p>
-            </div>
-          </div>
-          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
-            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
-            <div className='relative'>
-              <ArrowDownSvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
-              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Đảm bảo chất lượng</h3>
-              <p className='mt-2 text-base text-primary group-hover:text-white  '>
-                Sử dụng hương liệu an toàn, không hoá chất
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <ProductSection />
 
       <section className='bg-green-50'>
@@ -98,6 +63,41 @@ export default function Home() {
       </section>
 
       <BlogSection />
+
+      <section className='w-full'>
+        <div className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8'>
+          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
+            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
+            <div className='relative'>
+              <ShipSvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
+              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Giao hàng nhanh chóng</h3>
+              <p className='mt-2 text-base text-primary group-hover:text-white  '>
+                Miễn phí giao hàng cho đơn hàng trên 500k
+              </p>
+            </div>
+          </div>
+          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
+            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
+            <div className='relative'>
+              <MoneySvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
+              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Tiết kiệm chi phí</h3>
+              <p className='mt-2 text-base text-primary group-hover:text-white  '>
+                Giá cả hợp lý không qua khâu trung gian
+              </p>
+            </div>
+          </div>
+          <div className='transition-all  duration-1000 bg-white hover:bg-primary hover:shadow-xl m-2 p-3 relative z-40 group'>
+            <div className='absolute bg-primary top-0 left-0 w-24 h-1 z-30 transition-all duration-300 group-hover:bg-white group-hover:w-1/2' />
+            <div className='relative'>
+              <ArrowDownSvg className='mt-2 w-16 h-16 text-primary group-hover:text-white' />
+              <h3 className='mt-4 text-lg font-semibold text-primary group-hover:text-white '>Đảm bảo chất lượng</h3>
+              <p className='mt-2 text-base text-primary group-hover:text-white  '>
+                Sử dụng hương liệu an toàn, không hoá chất
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
