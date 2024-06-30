@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { formatPrice, formatPriceToPercent } from '@/lib/utils'
 import { QuantityButton } from '@/components/ui'
+import { ProductCard } from '@/components'
 import { ProductGallery } from '../components/product-gallery'
 import { ProductTabs } from '../components/product-tabs'
 
@@ -67,6 +68,16 @@ const ProductDetails = () => {
       </div>
 
       <ProductTabs />
+
+      <div className='mt-8 px-2 py-6'>
+        <h4 className='font-bold text-lg '>Có thể bạn quan tâm</h4>
+        <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4'>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
+      </div>
     </div>
   )
 }

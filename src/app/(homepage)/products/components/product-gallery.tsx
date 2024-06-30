@@ -15,7 +15,7 @@ export const ProductGallery = () => {
       <div className='lg:flex lg:items-start'>
         <div className='lg:order-2 lg:ml-5'>
           <div className='max-w-xl overflow-hidden rounded-lg'>
-            <div className='w-full h-full lg:h-[500px] lg:w-[500px]  aspect-square'>
+            <div className='w-full h-full lg:h-[500px] lg:w-[500px] aspect-square'>
               <Image
                 className='h-full w-full max-w-full object-cover'
                 src={products[activePropduct]}
