@@ -1,8 +1,15 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { BoxShoppingCart } from '@/components/boxes-shopping-cart'
 import { formatPrice } from '@/lib/utils'
 import { Button } from '@/components/ui'
 import { ShippingAddressForm } from './components/shipping-address-form'
+
+export const metadata: Metadata = {
+  title: 'Mua trà sâm dứa tại trasamdua.com',
+  description:
+    'Mua trà sâm dứa ngon, chất lượng tại Trà Sâm Dứa Ngọc Quang. Miễn phí giao hàng nội thành Hà Nội với đơn hàng từ 10 gói trở lên.',
+}
 
 const CartPage = () => {
   return (

@@ -1,11 +1,16 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
+import { Metadata } from 'next'
 import tea from 'public/tea-plantation.jpeg'
 
 const BlogCard = dynamic(() => import('@/components/blog-card').then((mod) => mod.BlogCard), {
   ssr: false,
 })
+
+export const metadata: Metadata = {
+  title: 'Pellentesque a consectetur velit, ac molestie ipsum. Donec sodales, massa et auctor.',
+  description: 'Pellentesque a consectetur velit, ac molestie ipsum. Donec sodales, massa et auctor.',
+}
 
 const BlogDetail = () => {
   return (

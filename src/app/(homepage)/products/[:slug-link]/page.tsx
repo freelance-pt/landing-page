@@ -1,8 +1,14 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { formatPrice, formatPriceToPercent } from '@/lib/utils'
-import { QuantityButton, Tabs } from '@/components/ui'
+import { QuantityButton } from '@/components/ui'
 import { ProductGallery } from '../components/product-gallery'
 import { ProductTabs } from '../components/product-tabs'
+
+export const metadata: Metadata = {
+  title: 'Trà sâm dứa - Ngọc Quang gói 350G [ Free ship nội thành Hà Nội ]',
+  description: 'Trà sâm dứa - Ngọc Quang - Miễn phí giao hàng trong nội thành Hà Nội với đơn hàng từ 10 gói trở lên.',
+}
 
 const ProductDetails = () => {
   return (

@@ -1,6 +1,12 @@
+import { Metadata } from 'next'
 import { ProductCard } from '@/components'
 import { Divider, Pagination } from '@/components/ui'
 import { ProductsFilter } from './components/products-filter'
+
+export const metadata: Metadata = {
+  title: 'Sản phẩm trà sâm dứa',
+  description: 'Bộ sưu tập trà sâm dứa tại Trà Sâm Dứa Ngọc Quang',
+}
 
 const ProductPage = () => {
   return (

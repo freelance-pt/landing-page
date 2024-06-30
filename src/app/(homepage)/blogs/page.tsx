@@ -1,10 +1,16 @@
 import dynamic from 'next/dynamic'
+import { Metadata } from 'next'
 import { Divider, Pagination } from '@/components/ui'
 import { BlogsFilter } from './components/blogs-filter'
 
 const BlogCard = dynamic(() => import('@/components/blog-card').then((mod) => mod.BlogCard), {
   ssr: false,
 })
+
+export const metadata: Metadata = {
+  title: 'Blog & Tin tức',
+  description: 'Cập nhật tin tức mới nhất từ trasamdua.com',
+}
 
 const BlogsPage = () => {
   return (

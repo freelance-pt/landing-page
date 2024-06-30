@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Metadata } from 'next'
 import ShipSvg from 'public/icons/ship.svg'
 import MoneySvg from 'public/icons/money.svg'
 import ArrowDownSvg from 'public/icons/arrow-down-circle.svg'
@@ -7,6 +8,12 @@ import { ProductSection } from './components/product-section'
 import { BlogSection } from './components/blog-section'
 import { Carousels } from './components/carousels'
 import { TitleSection } from './components/title-section'
+
+export const metadata: Metadata = {
+  title: 'Hệ thống cửa hàng chuyên cung cấp Trà Sâm Dứa tại Hà Nội',
+  description:
+    'Tổng đại lý chuyên cung cấp Trà Sâm Dứa - Đà Nẵng - Bảo Lộc - Uy Tín Số 1 - Báo Giá tốt nhất thị trường tại Hà Nội. Trà sâm dứa - Ngọc Quang',
+}
 
 export default function Home() {
   return (
